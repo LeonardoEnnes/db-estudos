@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.MainTest" time="0.035" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.AnimalTest" time="0.041" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/home/leo/projetos/db-estudos/Java/aula_01_intro_maven/target/test-classes:/home/leo/projetos/db-estudos/Java/aula_01_intro_maven/target/classes:/home/leo/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/leo/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="java.class.path" value="/home/ennes/projetos/db-estudos/Java/Exercicios/ex01_fazenda/target/test-classes:/home/ennes/projetos/db-estudos/Java/Exercicios/ex01_fazenda/target/classes:/home/ennes/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/ennes/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="java.vm.vendor" value="Ubuntu"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://ubuntu.com/"/>
@@ -11,36 +11,36 @@
     <property name="java.vm.specification.version" value="21"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-21-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/leo/projetos/db-estudos/Java/aula_01_intro_maven/target/surefire/surefirebooter3651401780260720198.jar /home/leo/projetos/db-estudos/Java/aula_01_intro_maven/target/surefire 2025-10-31T12-07-05_455-jvmRun1 surefire11263909714512601086tmp surefire_015311704359496871114tmp"/>
+    <property name="sun.java.command" value="/home/ennes/projetos/db-estudos/Java/Exercicios/ex01_fazenda/target/surefire/surefirebooter9954031022262081953.jar /home/ennes/projetos/db-estudos/Java/Exercicios/ex01_fazenda/target/surefire 2025-11-03T13-48-36_838-jvmRun1 surefire13297304593378828896tmp surefire_06136674806040189018tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/home/leo/projetos/db-estudos/Java/aula_01_intro_maven/target/test-classes:/home/leo/projetos/db-estudos/Java/aula_01_intro_maven/target/classes:/home/leo/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/leo/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="surefire.test.class.path" value="/home/ennes/projetos/db-estudos/Java/Exercicios/ex01_fazenda/target/test-classes:/home/ennes/projetos/db-estudos/Java/Exercicios/ex01_fazenda/target/classes:/home/ennes/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/ennes/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="/home/leo"/>
+    <property name="user.home" value="/home/ennes"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="java.version.date" value="2025-07-15"/>
     <property name="java.home" value="/usr/lib/jvm/java-21-openjdk-amd64"/>
     <property name="file.separator" value="/"/>
-    <property name="basedir" value="/home/leo/projetos/db-estudos/Java/aula_01_intro_maven"/>
+    <property name="basedir" value="/home/ennes/projetos/db-estudos/Java/Exercicios/ex01_fazenda"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/leo/projetos/db-estudos/Java/aula_01_intro_maven/target/surefire/surefirebooter3651401780260720198.jar"/>
+    <property name="surefire.real.class.path" value="/home/ennes/projetos/db-estudos/Java/Exercicios/ex01_fazenda/target/surefire/surefirebooter9954031022262081953.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.8+9-Ubuntu-0ubuntu124.04.1"/>
-    <property name="user.name" value="leo"/>
+    <property name="user.name" value="ennes"/>
     <property name="stdout.encoding" value="UTF-8"/>
     <property name="path.separator" value=":"/>
     <property name="os.version" value="6.6.87.1-microsoft-standard-WSL2"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
-    <property name="localRepository" value="/home/leo/.m2/repository"/>
+    <property name="localRepository" value="/home/ennes/.m2/repository"/>
     <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-21"/>
     <property name="java.io.tmpdir" value="/tmp"/>
     <property name="java.version" value="21.0.8"/>
-    <property name="user.dir" value="/home/leo/projetos/db-estudos/Java/aula_01_intro_maven"/>
+    <property name="user.dir" value="/home/ennes/projetos/db-estudos/Java/Exercicios/ex01_fazenda"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="native.encoding" value="UTF-8"/>
@@ -52,7 +52,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="com.example.MainTest" time="0.004"/>
-  <testcase name="shouldAnswerWithTrue2" classname="com.example.MainTest" time="0.001"/>
-  <testcase name="shouldAnswerWithTrue3" classname="com.example.MainTest" time="0"/>
+  <testcase name="ifCanCreateCowCorrectly" classname="com.example.AnimalTest" time="0.005"/>
+  <testcase name="ifCanCreateHorseCorrectly" classname="com.example.AnimalTest" time="0"/>
+  <testcase name="ifCanCreateDogCorrectly" classname="com.example.AnimalTest" time="0"/>
 </testsuite>
