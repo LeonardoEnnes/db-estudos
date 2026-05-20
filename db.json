@@ -1,0 +1,25 @@
+{
+    "projects": [],
+    "categorias": [
+        {
+            "id": 1,
+            "name": "infra"
+        },
+        {
+            "id": 2,
+            "name": "desenvolvimento"
+        },
+        {
+            "id": 3,
+            "name": "design"
+        },
+        {
+            "id": 4,
+            "name": "marketing"
+        },
+        {
+            "id": 5,
+            "name": "vendas"
+        }
+    ]
+}
