@@ -1,25 +1,38 @@
 {
-    "projects": [],
-    "categorias": [
-        {
-            "id": 1,
-            "name": "infra"
-        },
-        {
-            "id": 2,
-            "name": "desenvolvimento"
-        },
-        {
-            "id": 3,
-            "name": "design"
-        },
-        {
-            "id": 4,
-            "name": "marketing"
-        },
-        {
-            "id": 5,
-            "name": "vendas"
-        }
-    ]
+  "projetos": [
+    {
+      "name": "teste",
+      "budget": "121",
+      "category": {
+        "id": "2",
+        "name": "desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "zwc8trM8frI"
+    }
+  ],
+  "categorias": [
+    {
+      "id": "1",
+      "name": "infra"
+    },
+    {
+      "id": "2",
+      "name": "desenvolvimento"
+    },
+    {
+      "id": "3",
+      "name": "design"
+    },
+    {
+      "id": "4",
+      "name": "marketing"
+    },
+    {
+      "id": "5",
+      "name": "vendas"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
