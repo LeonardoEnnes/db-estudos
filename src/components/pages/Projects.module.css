@@ -1,0 +1,18 @@
+.project_container {
+    padding: 2em;
+    width: 100%;
+    max-width: 1200px; /* Mantém o conteúdo centralizado e elegante em telas largas */
+    margin: 0 auto;
+}
+
+.title_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinha o título e o botão verticalmente pelo centro */
+    margin-bottom: 2em;
+    width: 100%; /* Força o preenchimento total para o space-between funcionar */
+}
+
+.title_container h1 {
+    margin: 0;
+}
