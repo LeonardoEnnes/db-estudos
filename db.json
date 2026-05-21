@@ -59,6 +59,17 @@
       "cost": 0,
       "services": [],
       "id": "z4_S5JOcxCM"
+    },
+    {
+      "name": "teste",
+      "budget": "232",
+      "category": {
+        "id": "1",
+        "name": "infra"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "Q8ln-4xwLmo"
     }
   ],
   "categorias": [

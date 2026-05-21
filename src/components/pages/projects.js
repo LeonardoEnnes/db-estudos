@@ -5,10 +5,12 @@ import Container from '../layout/Container';
 import LinkButton from '../layout/LinkButton';
 import ProjectCard from '../project/ProjectCard';
 import { useState, useEffect } from 'react';
+import Loading from '../layout/Loading';
 
 function Projects(params) {
 
     const [projects, setProjects] = useState([]); // estado para armazenar os projetos
+    const [removeLoading, setRemoveLoading] = useState(false); // estado para controlar o carregamento dos projetos
 
     // acessando a mensagem passada pelo navigate
     const location = useLocation();
@@ -20,6 +22,8 @@ function Projects(params) {
 
     useEffect(() => {
         // fetch para buscar os projetos no backend
+        setTimeout(() => { // simula um tempo de carregamento para mostrar o loading
+            
         fetch('http://localhost:5000/projetos', {
             method: 'GET',
             headers: {
@@ -29,8 +33,11 @@ function Projects(params) {
         .then(resp => resp.json())
         .then(data => {
             setProjects(data);
+            setRemoveLoading(true);
         })
         .catch(err => console.log(err));
+        }, 300); // tempo de carregamento simulado de 300ms
+        
     }, []); // o array vazio garante que o useEffect seja executado apenas uma vez, quando o componente for montado
 
     return (
@@ -50,7 +57,10 @@ function Projects(params) {
                             category={project.category}
                         />
                     ))}
-
+                    {!removeLoading && <Loading />}
+                    {removeLoading && projects.length === 0 && (
+                        <p>Não há projetos cadastrados.</p>
+                    )}
                 </Container>
         </div>
     );
