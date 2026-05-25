@@ -5,7 +5,8 @@ import NewProject from "./components/pages/NewProject";
 import Container from "./components/layout/Container";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
-import Projects from "./components/pages/projects";
+import Projects from "./components/pages/Projects";
+import Project from "./components/pages/Project";
 
 import {
   BrowserRouter as Router,
@@ -31,6 +32,9 @@ function App() {
             <Route path="/projects" element={<Projects />} />
 
             <Route path="/newProject" element={<NewProject />} />
+
+            <Route path="/project/:id" element={<Project />} />
+
           </Routes>
         </Container>
         <Footer />

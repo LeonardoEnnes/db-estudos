@@ -1,31 +1,28 @@
 {
   "projetos": [
     {
-      "name": "teste",
+      "name": "novoa",
       "budget": "121",
       "category": {
         "id": "2",
         "name": "desenvolvimento"
       },
       "cost": 0,
-      "services": [],
-      "id": "zwc8trM8frI"
+      "services": [
+        {
+          "name": "teste",
+          "cost": "21",
+          "description": "wdawd",
+          "id": "9017afa1-b056-465b-aa42-d35e0f454336"
+        }
+      ],
+      "id": "zwc8trM8frI",
+      "costs": 21
     },
     {
       "cost": 0,
       "services": [],
       "id": "O0VoGDgyayM"
-    },
-    {
-      "name": "teste",
-      "budget": "12",
-      "category": {
-        "id": "3",
-        "name": "design"
-      },
-      "cost": 0,
-      "services": [],
-      "id": "zMtQgSjd13E"
     },
     {
       "name": "wwd",
@@ -48,17 +45,6 @@
       "cost": 0,
       "services": [],
       "id": "uUzRcUSGTik"
-    },
-    {
-      "name": "teste",
-      "budget": "11111",
-      "category": {
-        "id": "1",
-        "name": "infra"
-      },
-      "cost": 0,
-      "services": [],
-      "id": "z4_S5JOcxCM"
     },
     {
       "name": "teste",
