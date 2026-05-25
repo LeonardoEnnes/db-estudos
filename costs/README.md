@@ -2,6 +2,7 @@
 
 ## Sobre
 Esse projeto foi realizado acompanhando o canal Hora de Codar 
+Link: https://www.youtube.com/playlist?list=PLnDvRpP8BneyVA0SZ2okm-QBojomniQVO
 
 ## Como executar
 
