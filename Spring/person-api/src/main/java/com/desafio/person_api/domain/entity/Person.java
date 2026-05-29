@@ -3,7 +3,6 @@ package com.desafio.person_api.domain.entity;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import org.hibernate.validator.constraints.br.CPF;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
