@@ -10,6 +10,7 @@ import com.desafio.person_api.dto.AddressDto;
 import com.desafio.person_api.dto.PersonRequestDto;
 import com.desafio.person_api.dto.PersonResponseDto;
 import com.desafio.person_api.exception.BusinessException;
+import com.desafio.person_api.mapper.PersonMapper;
 import com.desafio.person_api.repository.PersonRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.data.domain.Page;
@@ -19,12 +20,13 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class PersonService {
     
-    private final PersonRepository personRepository; // precisa do final para o lombok
+    private final PersonRepository personRepository; 
+    private final PersonMapper personMapper;
 
     @Transactional(readOnly = true) // ?
     public Page<PersonResponseDto> findAll(Pageable pageable) {
         return personRepository.findAll(pageable)
-            .map(PersonResponseDto::fromEntity); // ver oq isso aq faz dps
+            .map(personMapper::toDto); 
     }
 
     @Transactional
@@ -43,7 +45,7 @@ public class PersonService {
         }
 
         Person savedPerson = personRepository.save(person);
-        return PersonResponseDto.fromEntity(savedPerson);
+        return personMapper.toDto(savedPerson);
     }
 
     @Transactional
@@ -66,7 +68,7 @@ public class PersonService {
         }
 
         Person updatePerson = personRepository.save(person);
-        return PersonResponseDto.fromEntity(updatePerson);
+        return personMapper.toDto(updatePerson);
     }
 
     @Transactional
