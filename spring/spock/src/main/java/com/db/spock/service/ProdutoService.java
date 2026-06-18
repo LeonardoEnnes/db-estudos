@@ -2,12 +2,12 @@ package com.db.spock.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 import com.db.spock.model.Produto;
 import com.db.spock.model.TypeProduto;
-
  
 @Service
 public class ProdutoService {
@@ -49,7 +49,7 @@ public class ProdutoService {
 
     public List<Produto> buscaProdutosCaros() {
         return produtos.stream()
-            .filter(prod -> prod.getPreco() > 5000.0) // coloquei 5k como muito caro
+            .filter(prod -> prod.getPreco() > 5000.0) 
             .toList();
     }
 
@@ -98,7 +98,7 @@ public class ProdutoService {
 
     public List<Double> obterValorTotalPorProduto() {
         return produtos.stream()
-            .map(prod -> prod.getPreco() + prod.getQuantidade())
+            .map(prod -> prod.getPreco() * prod.getQuantidade())
             .toList();
     }
 
@@ -182,12 +182,12 @@ public class ProdutoService {
                 .orElse(null);
     }
 
-    public java.util.Map<TypeProduto, List<Produto>> agruparPorTipo() {
+    public Map<TypeProduto, List<Produto>> agruparPorTipo() {
         return produtos.stream()
                 .collect(Collectors.groupingBy(Produto::getProduto));
     }
 
-    public java.util.Map<TypeProduto, Long> contarQuantidadePorTipo() {
+    public Map<TypeProduto, Long> contarQuantidadePorTipo() {
         return produtos.stream()
                 .collect(Collectors.groupingBy(Produto::getProduto, Collectors.counting()));
     }
