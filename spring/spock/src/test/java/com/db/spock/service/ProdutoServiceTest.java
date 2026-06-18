@@ -84,6 +84,36 @@ public class ProdutoServiceTest extends SimpleScenarioTest<ProdutoServiceTest.St
             total = service.calcularValorTotalEstoque();
             return this;
         }
+
+        public Stages when_busco_estoque_baixo() {
+            listaProdutoResult = service.buscaEstoqueBaixo();
+            return this;
+        }
+
+        public Stages when_busco_por_nome(String termo) {
+            listaProdutoResult = service.buscaNomes(termo);
+            return this;
+        }
+
+        public Stages when_verifico_se_nenhum_e_muito_caro() {
+            booleanResult = service.nenhumProdutoMuitoCaro();
+            return this;
+        }
+
+        public Stages when_busco_primeiro_produto() {
+            produtoResult = service.buscarPrimeiroProduto();
+            return this;
+        }
+
+        public Stages when_ordeno_por_preco_crescente() {
+            listaProdutoResult = service.ordenarPorPrecoCrescente();
+            return this;
+        }
+
+        public Stages when_busco_os_dois_mais_caros() {
+            listaProdutoResult = service.obterOsDoisMaisCaros();
+            return this;
+        }
  
         // THEN
         public Stages then_o_total_deve_ser(Double esperado) {
@@ -124,6 +154,16 @@ public class ProdutoServiceTest extends SimpleScenarioTest<ProdutoServiceTest.St
 
         public Stages then_o_mapa_deve_conter_a_chave(TypeProduto chave) {
             assertTrue(mapaAgrupadoResult.containsKey(chave));
+            return this;
+        }
+
+        public Stages then_o_nome_do_produto_retornado_deve_ser(String esperado) {
+            assertEquals(esperado, produtoResult.getNomeProduto());
+            return this;
+        }
+
+        public Stages then_o_preco_do_primeiro_item_deve_ser(double esperado) {
+            assertEquals(esperado, listaProdutoResult.get(0).getPreco());
             return this;
         }
     }
@@ -195,9 +235,38 @@ public class ProdutoServiceTest extends SimpleScenarioTest<ProdutoServiceTest.St
 
     @Test
     void deve_calcular_valor_total_por_produto_individual() {
-        // O primeiro produto (micro lenovo) deve ter total = 4000 * 2 = 8000.0
         given().given_umProdutto()
         .when_obtenho_valor_total_por_produto()
         .then_o_primeiro_valor_double_deve_ser(8000.0);
     }
+
+    @Test
+    void deve_filtrar_produtos_com_estoque_baixo() {
+        given().given_umProdutto()
+        .when_busco_estoque_baixo()
+        .then_a_lista_de_produtos_deve_ter_tamanho(3);
+    }
+
+    @Test
+    void deve_encontrar_produto_por_parte_do_nome() {
+        given().given_umProdutto()
+        .when_busco_por_nome("LeNoVo")
+        .then_a_lista_de_produtos_deve_ter_tamanho(1);
+        
+    }
+
+    @Test
+    void deve_garantir_que_nenhum_produto_passe_mil() {
+        given().given_umProdutto()
+        .when_verifico_se_nenhum_e_muito_caro()
+        .then_o_resultado_booleano_deve_ser(true);
+    }
+
+    @Test
+    void deve_retornar_o_primeiro_produto_inserido (){
+        given().given_umProdutto()
+        .when_busco_primeiro_produto()
+        .then_o_nome_do_produto_retornado_deve_ser("micro lenovo");
+    }
+
 }
